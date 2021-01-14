@@ -8,12 +8,17 @@ A Angular PoC to integrate with Zabbix Webhooks
 - ng-event-bus: to implement pub/sub inside Angular
 - primeng: frontend framework
 
-## Start Zabbix UI App:
+## Install Zabbix UI Dependencies:
+```
+npm install
+```
+
+## Start Zabbix UI:
 ```
 ng serve
 ```
 
-## Production Zabbix UI App compilation:
+## Production Zabbix UI compilation:
 ```
 ng build --prod
 ```
