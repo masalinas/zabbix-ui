@@ -35,8 +35,7 @@ export class AppComponent implements OnInit {
 
   public onSummit(event: any) {
     console.log(this.method);
-    
-    //this.zabbixApiCoreService.getJsonPost("user.get", {"output": "extend"})
+        
     this.zabbixApiCoreService.getJsonPost(this.method, this.parameters)
       .subscribe((result: any) => {
         console.log(result);
