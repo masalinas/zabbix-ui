@@ -1,2 +1,13 @@
 <h2>Zabbix UI Real Time Data</h2>
 {{data.message}}
+
+<h2>Zabbix UI Core API</h2>
+<div class="p-d-flex p-flex-column">
+  <input type="text" pInputText [(ngModel)]='method'>
+  <textarea rows="5" cols="30" pInputTextarea [(ngModel)]='parameters'></textarea>
+
+  <p-button label="Submit" (click)="onSummit($event)"></p-button>
+</div>
+
+<h2>Zabbix API Result</h2>
+{{result}}
