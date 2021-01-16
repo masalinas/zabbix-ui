@@ -2,7 +2,8 @@
 
 A Angular PoC to integrate with Zabbix Webhooks
 
-![image](https://user-images.githubusercontent.com/1216181/104733402-f0888600-573e-11eb-98a0-ee7395d1ac09.png)
+![image](https://user-images.githubusercontent.com/1216181/104812854-6bb46f80-5805-11eb-8adf-85287f45691a.png)
+
 
 ## Dependencies
 
