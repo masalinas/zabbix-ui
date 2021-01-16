@@ -21,6 +21,8 @@
     "@angular/router": "~9.0.2",
     "@aspnet/signalr": "^1.1.4",
     "@microsoft/signalr": "^5.0.2",
+    "ang-jsoneditor": "^1.10.4",
+    "jsoneditor": "^9.1.8",
     "ng-event-bus": "^2.0.0",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",

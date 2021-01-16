@@ -4,6 +4,9 @@ import { SignalRService } from './services/signal-r.service';
 // event bus service
 import { NgEventBus } from 'ng-event-bus';
 
+// json editor
+import { JsonEditorComponent, JsonEditorOptions } from 'ang-jsoneditor';
+
 import { ZabbixApiCoreService } from './shared/backend/api/api';
 
 @Component({
@@ -12,6 +15,8 @@ import { ZabbixApiCoreService } from './shared/backend/api/api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  public editorOptions: JsonEditorOptions;
+
   public method: string;
   public parameters: object;
   public result: object;
@@ -22,6 +27,8 @@ export class AppComponent implements OnInit {
   constructor(private eventBus: NgEventBus,
               public signalRService: SignalRService,
               private zabbixApiCoreService: ZabbixApiCoreService) {
+     this.editorOptions = new JsonEditorOptions()
+     this.editorOptions.modes = ['code', 'text', 'tree', 'view'];
   }
 
   ngOnInit() {
@@ -35,11 +42,11 @@ export class AppComponent implements OnInit {
 
   public onSummit(event: any) {
     console.log(this.method);
-        
+
     this.zabbixApiCoreService.getJsonPost(this.method, this.parameters)
       .subscribe((result: any) => {
         console.log(result);
-        this.result = result;
+        this.result = JSON.parse(result);
       },
       err => {
         console.log(err);

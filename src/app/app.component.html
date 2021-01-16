@@ -1,13 +1,36 @@
-<h2>Zabbix UI Real Time Data</h2>
-{{data.message}}
+<div class="p-d-flex p-jc-around">
+  <div class="p-d-flex p-flex-column">
+      <h2>Zabbix UI Real Time Data</h2>
 
-<h2>Zabbix UI Core API</h2>
-<div class="p-d-flex p-flex-column">
-  <input type="text" pInputText [(ngModel)]='method'>
-  <textarea rows="5" cols="30" pInputTextarea [(ngModel)]='parameters'></textarea>
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="method">Zabbix RT Data</label>
+          <json-editor [options]="editorOptions" [data]="data"></json-editor>
+        </div>
+      </div>
+  </div>
 
-  <p-button label="Submit" (click)="onSummit($event)"></p-button>
+  <div class="p-d-flex p-flex-column">
+      <h2>Zabbix UI Core API</h2>
+
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="method">Method</label>
+          <input id="method" type="text" pInputText [(ngModel)]='method'>
+        </div>
+        <br>
+        <div class="p-field">
+          <label for="params">Params</label>
+          <textarea id="params" rows="5" cols="30" pInputTextarea [(ngModel)]='parameters'></textarea>
+        </div>
+        <br>
+        <div class="p-field">
+          <label for="method">Zabbix Result</label>
+          <json-editor [options]="editorOptions" [data]="result"></json-editor>
+        </div>
+        <br>
+      </div>
+
+      <p-button label="Submit" (click)="onSummit($event)"></p-button>
+  </div>
 </div>
-
-<h2>Zabbix API Result</h2>
-{{result}}

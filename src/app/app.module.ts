@@ -15,6 +15,9 @@ import { environment } from '../environments/environment';
 // App Components event bus
 import { NgEventBus } from 'ng-event-bus';
 
+// json editor
+import { NgJsonEditorModule } from 'ang-jsoneditor'
+
 import { ApiModule, Configuration, ConfigurationParameters, BASE_PATH } from './shared/backend';
 
 import { AppComponent } from './app.component';
@@ -28,6 +31,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    NgJsonEditorModule,
     ButtonModule,
     InputTextModule,
     InputTextareaModule
