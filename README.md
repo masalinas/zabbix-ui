@@ -10,6 +10,7 @@ A Angular PoC to integrate with Zabbix Webhooks
 - **Microsoft signalR**: to implement websockets with the backend
 - **ng-event-bus**: to implement pub/sub inside Angular
 - **primeNG**: frontend framework
+- **ang-jsoneditor**: angular JSON editor
 
 ## Install Zabbix UI Dependencies:
 ```
